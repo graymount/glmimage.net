@@ -496,6 +496,7 @@ export const aiTask = table(
     costCredits: integer('cost_credits').notNull().default(0),
     scene: text('scene').notNull().default(''),
     creditId: text('credit_id'), // credit consumption record id
+    sessionId: text('session_id'), // groups tasks in a comparison session
   },
   (table) => [
     // Composite: Query user's AI tasks by status
@@ -504,6 +505,8 @@ export const aiTask = table(
     // Composite: Query user's AI tasks by media type and provider
     // Can also be used for: WHERE mediaType = ? AND provider = ? (left-prefix)
     index('idx_ai_task_media_type_status').on(table.mediaType, table.status),
+    // Query tasks by session ID for comparison feature
+    index('idx_ai_task_session').on(table.sessionId),
   ]
 );
 

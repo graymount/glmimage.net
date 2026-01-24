@@ -54,6 +54,14 @@ export async function findAITaskById(id: string) {
   return result;
 }
 
+export async function findAITasksBySessionId(sessionId: string) {
+  const result = await db()
+    .select()
+    .from(aiTask)
+    .where(eq(aiTask.sessionId, sessionId));
+  return result;
+}
+
 export async function updateAITaskById(id: string, updateAITask: UpdateAITask) {
   const result = await db().transaction(async (tx) => {
     // task failed, Revoke credit consumption record
