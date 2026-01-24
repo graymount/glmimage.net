@@ -6,7 +6,7 @@ import { toast } from 'sonner';
 
 import { Button } from '@/shared/components/ui/button';
 import { Textarea } from '@/shared/components/ui/textarea';
-import { useAppContext } from '@/shared/contexts/app-context';
+import { useAppContext } from '@/shared/contexts/app';
 import {
   CompareTask,
   CompareGenerateResponse,
@@ -20,7 +20,7 @@ const POLL_INTERVAL = 5000; // 5 seconds
 const POLL_TIMEOUT = 180000; // 3 minutes
 
 export function CompareGenerator() {
-  const { user, setSigninOpen } = useAppContext();
+  const { user, setIsShowSignModal } = useAppContext();
 
   // Input state
   const [prompt, setPrompt] = useState('');
@@ -101,7 +101,7 @@ export function CompareGenerator() {
   // Handle generate
   const handleGenerate = async () => {
     if (!user) {
-      setSigninOpen(true);
+      setIsShowSignModal(true);
       return;
     }
 
