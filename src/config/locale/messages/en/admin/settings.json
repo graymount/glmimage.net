@@ -25,7 +25,8 @@
     "crisp": "Crisp",
     "credit": "Credit",
     "appinfo": "App Info",
-    "user_role": "User Role"
+    "user_role": "User Role",
+    "image_models": "Image Models"
   },
   "edit": {
     "title": "Settings",
