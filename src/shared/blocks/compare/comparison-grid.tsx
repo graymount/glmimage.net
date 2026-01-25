@@ -21,16 +21,24 @@ export function ComparisonGrid({
     return null;
   }
 
+  // For single task (iteration mode), center it
+  const isSingleTask = tasks.length === 1;
+
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div className={
+      isSingleTask
+        ? "flex justify-center"
+        : "grid grid-cols-2 md:grid-cols-4 gap-4"
+    }>
       {tasks.map((task) => (
-        <ModelCard
-          key={task.id}
-          task={task}
-          isSelected={selectedTaskId === task.id}
-          onSelect={() => onSelect(task.id)}
-          disabled={isLoading}
-        />
+        <div key={task.id} className={isSingleTask ? "w-full max-w-sm" : ""}>
+          <ModelCard
+            task={task}
+            isSelected={selectedTaskId === task.id}
+            onSelect={() => onSelect(task.id)}
+            disabled={isLoading}
+          />
+        </div>
       ))}
     </div>
   );
