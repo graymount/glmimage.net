@@ -88,12 +88,12 @@ export class GeminiProvider implements AIProvider {
     const { image_input, ...generationConfig } = options || {};
 
     const payload = {
-      contents: {
+      contents: [{
         role: 'user',
         parts: requestParts,
-      },
-      generation_config: {
-        response_modalities: ['TEXT', 'IMAGE'],
+      }],
+      generationConfig: {
+        responseModalities: ['TEXT', 'IMAGE'],
         ...generationConfig,
       },
     };

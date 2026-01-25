@@ -62,5 +62,5 @@ export const COMPARE_MODELS: CompareModel[] = [
   { model: 'fal-ai/flux/dev', label: 'Flux Dev', style: 'Balanced', cost: 2, provider: 'fal' },
   { model: 'fal-ai/recraft-v3', label: 'Recraft', style: 'Design', cost: 3, provider: 'fal' },
   { model: 'fal-ai/ideogram/v2', label: 'Ideogram', style: 'Typography', cost: 3, provider: 'fal' },
-  { model: 'gemini-2.0-flash-exp-image-generation', label: 'Gemini', style: 'Creative', cost: 3, provider: 'gemini' },
+  { model: 'gemini-2.5-flash-image', label: 'Gemini', style: 'Creative', cost: 3, provider: 'gemini' },
 ];

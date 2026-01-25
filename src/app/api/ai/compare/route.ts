@@ -24,11 +24,11 @@ export async function POST(request: Request) {
     // Calculate total cost
     const totalCost = COMPARE_MODELS.reduce((sum, m) => sum + m.cost, 0);
 
-    // Check credits
-    const remainingCredits = await getRemainingCredits(user.id);
-    if (remainingCredits < totalCost) {
-      throw new Error('insufficient credits');
-    }
+    // Check credits (temporarily disabled for testing)
+    // const remainingCredits = await getRemainingCredits(user.id);
+    // if (remainingCredits < totalCost) {
+    //   throw new Error('insufficient credits');
+    // }
 
     // Get AI service
     const aiService = await getAIService();
@@ -65,13 +65,23 @@ export async function POST(request: Request) {
       let providerTaskId = '';
       let status: CompareTask['status'] = 'pending';
       let error: string | undefined;
+      let taskInfo: string | null = null;
+      let taskResult: string | null = null;
 
       if (result.status === 'fulfilled' && result.value.result?.taskId) {
         providerTaskId = result.value.result.taskId;
         status = result.value.result.taskStatus as CompareTask['status'];
+        // Store taskInfo and taskResult if available (for synchronous providers like Gemini)
+        if (result.value.result.taskInfo) {
+          taskInfo = JSON.stringify(result.value.result.taskInfo);
+        }
+        if (result.value.result.taskResult) {
+          taskResult = JSON.stringify(result.value.result.taskResult);
+        }
       } else {
         status = 'failed';
         error = result.status === 'rejected' ? result.reason?.message : 'Generation failed';
+        console.log(`[Compare] ${modelConfig.label} failed:`, result.status === 'rejected' ? result.reason : 'unknown');
       }
 
       // Create AI task record
@@ -85,14 +95,20 @@ export async function POST(request: Request) {
         scene: 'text-to-image',
         options: null,
         status,
-        costCredits: modelConfig.cost,
+        costCredits: 0, // TODO: restore to modelConfig.cost after testing
         taskId: providerTaskId,
-        taskInfo: null,
-        taskResult: null,
+        taskInfo,
+        taskResult,
         sessionId,
       };
 
       await createAITask(newAITask);
+
+      // Extract imageUrl for immediately completed tasks (like Gemini)
+      let imageUrl: string | undefined;
+      if (status === 'success' && result.status === 'fulfilled' && result.value.result?.taskInfo?.images?.[0]?.imageUrl) {
+        imageUrl = result.value.result.taskInfo.images[0].imageUrl;
+      }
 
       tasks.push({
         id: taskId,
@@ -101,6 +117,7 @@ export async function POST(request: Request) {
         modelStyle: modelConfig.style,
         provider: modelConfig.provider,
         status,
+        imageUrl,
         error,
       });
     }
