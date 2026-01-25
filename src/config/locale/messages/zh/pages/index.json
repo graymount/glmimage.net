@@ -37,17 +37,9 @@
         ],
         "show_avatars": false,
         "show_award": false,
-        "image": {
-          "src": "/imgs/features/compare-demo.png",
-          "alt": "glmimage.net 多模型对比演示",
-          "width": 1200,
-          "height": 800
-        },
-        "image_invert": {
-          "src": "/imgs/features/compare-demo.png",
-          "alt": "glmimage.net 多模型对比演示",
-          "width": 1200,
-          "height": 800
+        "background_image": {
+          "src": "/imgs/features/hero-bg.png",
+          "alt": "AI 图像生成抽象背景"
         }
       },
       "usage": {
