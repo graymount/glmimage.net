@@ -32,10 +32,6 @@ export async function POST(req: Request) {
     }
 
     const aiService = await getAIService();
-    const falProvider = aiService.getProvider('fal');
-    if (!falProvider) {
-      return respErr('fal provider not configured');
-    }
 
     // Query status for each task
     const compareTasks: CompareTask[] = [];
@@ -87,8 +83,23 @@ export async function POST(req: Request) {
 
       allComplete = false;
 
+      // Get the correct provider for this task
+      const provider = aiService.getProvider(task.provider);
+      if (!provider) {
+        compareTasks.push({
+          id: task.id,
+          model: task.model,
+          modelLabel: modelConfig?.label || task.model,
+          modelStyle: modelConfig?.style || '',
+          provider: task.provider,
+          status: 'failed',
+          error: `${task.provider} provider not configured`,
+        });
+        continue;
+      }
+
       try {
-        const result = await falProvider.query?.({
+        const result = await provider.query?.({
           taskId: task.taskId,
           mediaType: task.mediaType,
           model: task.model,

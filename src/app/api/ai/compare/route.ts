@@ -32,10 +32,6 @@ export async function POST(request: Request) {
 
     // Get AI service
     const aiService = await getAIService();
-    const falProvider = aiService.getProvider('fal');
-    if (!falProvider) {
-      throw new Error('fal provider not configured');
-    }
 
     // Generate session ID to group all tasks
     const sessionId = getUuid();
@@ -43,7 +39,11 @@ export async function POST(request: Request) {
     // Fire all model requests concurrently
     const results = await Promise.allSettled(
       COMPARE_MODELS.map(async (m) => {
-        const result = await falProvider.generate({
+        const provider = aiService.getProvider(m.provider);
+        if (!provider) {
+          throw new Error(`${m.provider} provider not configured`);
+        }
+        const result = await provider.generate({
           params: {
             mediaType: AIMediaType.IMAGE,
             model: m.model,
@@ -79,7 +79,7 @@ export async function POST(request: Request) {
         id: taskId,
         userId: user.id,
         mediaType: AIMediaType.IMAGE,
-        provider: 'fal',
+        provider: modelConfig.provider,
         model: modelConfig.model,
         prompt: prompt.trim(),
         scene: 'text-to-image',
@@ -99,7 +99,7 @@ export async function POST(request: Request) {
         model: modelConfig.model,
         modelLabel: modelConfig.label,
         modelStyle: modelConfig.style,
-        provider: 'fal',
+        provider: modelConfig.provider,
         status,
         error,
       });

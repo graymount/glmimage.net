@@ -39,9 +39,9 @@ export async function POST(request: Request) {
 
     // Get AI service
     const aiService = await getAIService();
-    const falProvider = aiService.getProvider('fal');
-    if (!falProvider) {
-      throw new Error('fal provider not configured');
+    const provider = aiService.getProvider(modelConfig.provider);
+    if (!provider) {
+      throw new Error(`${modelConfig.provider} provider not configured`);
     }
 
     // Generate session ID
@@ -54,7 +54,7 @@ export async function POST(request: Request) {
     let error: string | undefined;
 
     try {
-      const result = await falProvider.generate({
+      const result = await provider.generate({
         params: {
           mediaType: AIMediaType.IMAGE,
           model: modelConfig.model,
@@ -79,7 +79,7 @@ export async function POST(request: Request) {
       id: taskId,
       userId: user.id,
       mediaType: AIMediaType.IMAGE,
-      provider: 'fal',
+      provider: modelConfig.provider,
       model: modelConfig.model,
       prompt: prompt.trim(),
       scene: 'text-to-image',
@@ -99,7 +99,7 @@ export async function POST(request: Request) {
       model: modelConfig.model,
       modelLabel: modelConfig.label,
       modelStyle: modelConfig.style,
-      provider: 'fal',
+      provider: modelConfig.provider,
       status,
       error,
     };
