@@ -38,7 +38,7 @@
       },
       "features": {
         "id": "features",
-        "title": "4 个模型，4 种风格",
+        "title": "5 个模型，5 种风格",
         "description": "每个模型各有所长，找到适合你的。",
         "items": [
           {
@@ -60,6 +60,11 @@
             "title": "Ideogram",
             "description": "文字渲染一流。适合 Logo、海报设计。",
             "icon": "RiText"
+          },
+          {
+            "title": "Gemini",
+            "description": "Google 最新图像模型。创意多变，风格独特。",
+            "icon": "RiGoogleFill"
           }
         ]
       },

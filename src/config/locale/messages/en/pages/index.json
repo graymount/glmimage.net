@@ -38,7 +38,7 @@
       },
       "features": {
         "id": "features",
-        "title": "4 AI Models, 4 Styles",
+        "title": "5 AI Models, 5 Styles",
         "description": "Each model has unique strengths. Find yours.",
         "items": [
           {
@@ -60,6 +60,11 @@
             "title": "Ideogram",
             "description": "Excellent text rendering. Ideal for logos and posters.",
             "icon": "RiText"
+          },
+          {
+            "title": "Gemini",
+            "description": "Google's latest image model. Creative and versatile output.",
+            "icon": "RiGoogleFill"
           }
         ]
       },

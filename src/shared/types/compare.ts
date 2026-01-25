@@ -55,10 +55,11 @@ export interface CompareQueryResponse {
   };
 }
 
-// Default models for comparison (4-6 with distinct styles)
+// Default models for comparison (5 with distinct styles)
 export const COMPARE_MODELS: CompareModel[] = [
   { model: 'fal-ai/flux-pro/v1.1', label: 'Flux Pro', style: 'Photorealistic', cost: 4 },
   { model: 'fal-ai/flux/dev', label: 'Flux Dev', style: 'Balanced', cost: 2 },
   { model: 'fal-ai/recraft-v3', label: 'Recraft', style: 'Design', cost: 3 },
   { model: 'fal-ai/ideogram/v2', label: 'Ideogram', style: 'Typography', cost: 3 },
+  { model: 'fal-ai/google/imagen-3', label: 'Gemini', style: 'Creative', cost: 3 },
 ];
