@@ -2,7 +2,6 @@
   "page": {
     "show_sections": [
       "hero",
-      "usage",
       "features",
       "faq",
       "cta"
@@ -12,12 +11,7 @@
         "id": "hero",
         "title": "一个提示词，多种风格方向",
         "highlight_text": "多种风格方向",
-        "description": "不再猜测哪个 AI 模型适合你的创意。<br/>并排对比，选定方向，反复迭代直到完美。",
-        "announcement": {
-          "badge": "新功能",
-          "title": "立即体验多模型对比",
-          "url": "/compare"
-        },
+        "description": "不再猜测哪个 AI 模型适合你。<br/>并排对比，选定方向，迭代到完美。",
         "tip": "新用户赠送 10 积分",
         "buttons": [
           {
@@ -42,49 +36,10 @@
           "alt": "AI 图像生成抽象背景"
         }
       },
-      "usage": {
-        "block": "features-step",
-        "id": "usage",
-        "title": "三步找到你的创意方向",
-        "description": "简单三步，快速找到最适合的 AI 风格",
-        "image": {
-          "src": "/imgs/features/1.png",
-          "alt": "usage"
-        },
-        "image_position": "left",
-        "text_align": "center",
-        "items": [
-          {
-            "title": "描述你的想法",
-            "description": "输入提示词，描述你想要创作的图像。可以具体，也可以抽象。",
-            "image": {
-              "src": "/imgs/features/step-1.png",
-              "alt": "输入提示词"
-            }
-          },
-          {
-            "title": "对比多个模型",
-            "description": "同时查看 4 个不同 AI 模型的结果。每个模型风格各异，各有所长。",
-            "image": {
-              "src": "/imgs/features/step-2.png",
-              "alt": "对比结果"
-            }
-          },
-          {
-            "title": "选定并迭代",
-            "description": "选择你最喜欢的方向，然后用同一个模型反复调整，直到完美。",
-            "image": {
-              "src": "/imgs/features/step-3.png",
-              "alt": "迭代优化"
-            }
-          }
-        ],
-        "className": "bg-muted"
-      },
       "features": {
         "id": "features",
-        "title": "为什么要先对比？",
-        "description": "不同 AI 模型擅长不同风格。先对比，再投入。",
+        "title": "4 个模型，4 种风格",
+        "description": "每个模型各有所长，找到适合你的。",
         "items": [
           {
             "title": "Flux Pro",
@@ -105,67 +60,38 @@
             "title": "Ideogram",
             "description": "文字渲染一流。适合 Logo、海报设计。",
             "icon": "RiText"
-          },
-          {
-            "title": "一键下载",
-            "description": "生成的图片即刻下载。无水印，原画质。",
-            "icon": "RiDownloadLine"
-          },
-          {
-            "title": "历史记录",
-            "description": "追踪你的创作历程。随时回顾和下载所有生成图片。",
-            "icon": "RiHistoryLine"
           }
         ]
       },
       "faq": {
         "id": "faq",
         "title": "常见问题",
-        "description": "关于 glmimage.net 你想知道的都在这里",
+        "description": "",
         "items": [
           {
             "question": "生成图片要多少钱？",
-            "answer": "对比生成（4 个模型）消耗 12 积分。单模型迭代消耗 2-4 积分，具体取决于模型。新用户赠送 10 积分。"
+            "answer": "对比生成（4 模型）消耗 12 积分。单模型迭代 2-4 积分。新用户赠送 10 积分。"
           },
           {
-            "question": "支持哪些 AI 模型？",
-            "answer": "目前支持 Flux Pro（写实）、Flux Dev（平衡）、Recraft（设计）、Ideogram（字体）。更多模型陆续上线。"
-          },
-          {
-            "question": "生成的图片可以下载吗？",
-            "answer": "可以！所有生成的图片都归你所有，可直接下载使用。无水印，原始分辨率。"
+            "question": "图片可以下载吗？",
+            "answer": "可以！所有图片归你所有，无水印，原画质，即刻下载。"
           },
           {
             "question": "选定方向后会怎样？",
-            "answer": "进入单模型迭代模式。你可以继续调整提示词，用同一个模型反复生成，直到满意为止。"
-          },
-          {
-            "question": "有 API 可用吗？",
-            "answer": "暂时没有，正在开发中。目前请使用网页端生成和下载图片。"
-          },
-          {
-            "question": "支持什么图片格式和尺寸？",
-            "answer": "图片以高分辨率生成（通常 1024x1024 或类似尺寸），可下载 PNG 格式。"
+            "answer": "进入迭代模式，用同一个模型反复调整，直到满意。"
           }
         ]
       },
       "cta": {
         "id": "cta",
-        "title": "准备好找到你的创意方向了吗？",
-        "description": "开始对比 AI 模型，创作精彩图像。",
+        "title": "准备好找到你的风格了吗？",
+        "description": "",
         "buttons": [
           {
             "title": "开始创作",
             "url": "/compare",
             "target": "_self",
             "icon": "Sparkles"
-          },
-          {
-            "title": "查看价格",
-            "url": "/pricing",
-            "target": "_self",
-            "variant": "outline",
-            "icon": "DollarSign"
           }
         ],
         "className": "bg-muted"

@@ -2,7 +2,6 @@
   "page": {
     "show_sections": [
       "hero",
-      "usage",
       "features",
       "faq",
       "cta"
@@ -12,12 +11,7 @@
         "id": "hero",
         "title": "One prompt. Multiple directions.",
         "highlight_text": "Multiple directions",
-        "description": "Stop guessing which AI model suits your vision.<br/>Compare them side by side, pick a direction, and iterate until perfect.",
-        "announcement": {
-          "badge": "New",
-          "title": "Try Compare & Generate now",
-          "url": "/compare"
-        },
+        "description": "Stop guessing which AI model suits your vision.<br/>Compare side by side, pick your direction, iterate until perfect.",
         "tip": "Start with 10 free credits",
         "buttons": [
           {
@@ -42,130 +36,62 @@
           "alt": "AI image generation abstract background"
         }
       },
-      "usage": {
-        "block": "features-step",
-        "id": "usage",
-        "title": "How It Works",
-        "description": "Find your visual direction in three simple steps",
-        "image": {
-          "src": "/imgs/features/1.png",
-          "alt": "usage"
-        },
-        "image_position": "left",
-        "text_align": "center",
-        "items": [
-          {
-            "title": "Describe Your Vision",
-            "description": "Enter a prompt describing the image you want to create. Be as specific or abstract as you like.",
-            "image": {
-              "src": "/imgs/features/step-1.png",
-              "alt": "Enter prompt"
-            }
-          },
-          {
-            "title": "Compare AI Models",
-            "description": "See results from 4 different AI models side by side. Each has its own style and strengths.",
-            "image": {
-              "src": "/imgs/features/step-2.png",
-              "alt": "Compare results"
-            }
-          },
-          {
-            "title": "Pick & Iterate",
-            "description": "Select the direction you like best, then keep refining with the same model until it's perfect.",
-            "image": {
-              "src": "/imgs/features/step-3.png",
-              "alt": "Iterate"
-            }
-          }
-        ],
-        "className": "bg-muted"
-      },
       "features": {
         "id": "features",
-        "title": "Why Compare First?",
-        "description": "Different AI models excel at different styles. Find yours before committing.",
+        "title": "4 AI Models, 4 Styles",
+        "description": "Each model has unique strengths. Find yours.",
         "items": [
           {
             "title": "Flux Pro",
-            "description": "Photorealistic images with stunning detail and lighting. Best for product shots and portraits.",
+            "description": "Photorealistic with stunning detail. Best for product shots and portraits.",
             "icon": "RiCameraLensFill"
           },
           {
             "title": "Flux Dev",
-            "description": "Balanced quality and speed. Great for exploration and general-purpose generation.",
+            "description": "Balanced quality and speed. Great for general-purpose generation.",
             "icon": "RiLightbulbFlashLine"
           },
           {
             "title": "Recraft",
-            "description": "Design-focused with clean aesthetics. Perfect for illustrations and brand assets.",
+            "description": "Design-focused with clean aesthetics. Perfect for illustrations.",
             "icon": "RiBrushLine"
           },
           {
             "title": "Ideogram",
-            "description": "Excellent typography and text rendering. Ideal for logos and text-heavy designs.",
+            "description": "Excellent text rendering. Ideal for logos and posters.",
             "icon": "RiText"
-          },
-          {
-            "title": "One Click Download",
-            "description": "Download any generated image instantly. No watermarks, full resolution.",
-            "icon": "RiDownloadLine"
-          },
-          {
-            "title": "Session History",
-            "description": "Track your creative journey. Review and download all images from your session.",
-            "icon": "RiHistoryLine"
           }
         ]
       },
       "faq": {
         "id": "faq",
-        "title": "Questions & Answers",
-        "description": "Everything you need to know about glmimage.net",
+        "title": "FAQ",
+        "description": "",
         "items": [
           {
-            "question": "How much does it cost to generate images?",
-            "answer": "A comparison (4 models) costs 12 credits. Individual iterations cost 2-4 credits depending on the model. New users get 10 free credits to start."
+            "question": "How much does it cost?",
+            "answer": "Compare (4 models) costs 12 credits. Single model iteration costs 2-4 credits. New users get 10 free credits."
           },
           {
-            "question": "Which AI models are available?",
-            "answer": "We currently support Flux Pro (photorealistic), Flux Dev (balanced), Recraft (design-focused), and Ideogram (typography). More models coming soon."
+            "question": "Can I download the images?",
+            "answer": "Yes! All images are yours. No watermarks, full resolution, instant download."
           },
           {
-            "question": "Can I download the images I generate?",
-            "answer": "Yes! All generated images are yours to download and use. No watermarks, full resolution, available instantly."
-          },
-          {
-            "question": "What happens after I select a direction?",
-            "answer": "You enter iteration mode with your chosen model. Keep refining your prompt and generating until you achieve the perfect result."
-          },
-          {
-            "question": "Is there an API available?",
-            "answer": "Not yet, but we're working on it. For now, use our web interface to generate and download images."
-          },
-          {
-            "question": "What image formats and sizes are supported?",
-            "answer": "Images are generated at high resolution (typically 1024x1024 or similar) and can be downloaded as PNG files."
+            "question": "What happens after I pick a direction?",
+            "answer": "You enter iteration mode. Keep refining with the same model until perfect."
           }
         ]
       },
       "cta": {
         "id": "cta",
-        "title": "Ready to find your visual direction?",
-        "description": "Start comparing AI models and create stunning images today.",
+        "title": "Ready to find your style?",
+        "description": "",
         "buttons": [
           {
             "title": "Start Creating",
             "url": "/compare",
             "target": "_self",
             "icon": "Sparkles"
-          },
-          {
-            "title": "View Pricing",
-            "url": "/pricing",
-            "target": "_self",
-            "variant": "outline",
-            "icon": "DollarSign"
           }
         ],
         "className": "bg-muted"
