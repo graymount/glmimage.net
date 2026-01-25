@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "ShipAny 模板二",
-    "description": "ShipAny 是用于构建 AI SaaS 创业项目的 NextJS 脚手架。提供丰富模板和组件，助您快速上线产品。",
-    "keywords": "shipany, shipany-boilerplate, shipany-template-two-demo"
+    "title": "glmimage.net",
+    "description": "AI图像模型对比工具。一个提示词，多种风格方向。选择你的视觉方向，持续迭代优化。",
+    "keywords": "ai图像生成, 图像对比, flux, recraft, ideogram, stable diffusion"
   },
   "sign": {
     "sign_in_title": "登录",

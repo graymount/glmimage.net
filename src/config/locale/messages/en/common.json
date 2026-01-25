@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "ShipAny Template Two",
-    "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups. Ship Fast with a variety of templates and components.",
-    "keywords": "shipany, shipany-boilerplate, shipany-template-two-demo"
+    "title": "glmimage.net",
+    "description": "Compare AI image models side by side. One prompt, multiple directions. Pick your visual direction and keep iterating.",
+    "keywords": "ai image generator, image comparison, flux, recraft, ideogram, stable diffusion"
   },
   "sign": {
     "sign_in_title": "Sign In",

@@ -286,7 +286,7 @@ export async function getSettings() {
     {
       name: 'app_name',
       title: 'App Name',
-      placeholder: 'ShipAny',
+      placeholder: 'glmimage.net',
       type: 'text',
       group: 'appinfo',
       tab: 'general',
@@ -295,7 +295,7 @@ export async function getSettings() {
       name: 'app_description',
       title: 'App Description',
       placeholder:
-        'ShipAny is a NextJS boilerplate for building AI SaaS startups. ',
+        'Compare AI image models side by side. Pick your visual direction.',
       type: 'textarea',
       group: 'appinfo',
       tab: 'general',

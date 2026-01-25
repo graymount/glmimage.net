@@ -20,4 +20,6 @@ export default defineConfig({
     schema: envConfigs.db_migrations_schema,
     table: envConfigs.db_migrations_table,
   },
+  // Only scan our target schema (avoid parsing other schemas with incompatible constraints)
+  schemaFilter: envConfigs.db_schema ? [envConfigs.db_schema] : ['public'],
 });
