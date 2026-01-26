@@ -12,9 +12,9 @@
     "sections": {
       "hero": {
         "id": "hero",
-        "title": "One prompt. Multiple directions.",
-        "highlight_text": "Multiple directions",
-        "description": "Stop guessing which AI model suits your vision.<br/>Compare 5 AI models side by side, pick your direction, iterate until perfect.",
+        "title": "Generate. Look. Make your choice.",
+        "highlight_text": "Make your choice",
+        "description": "GLM Image — the fastest way to find your visual direction.<br/>Compare multiple AI models side by side, pick what works, iterate until perfect.",
         "tip": "🎉 Start with 10 free credits - No credit card required",
         "buttons": [
           {
@@ -124,7 +124,7 @@
       },
       "features": {
         "id": "features",
-        "title": "5 AI Models, 5 Unique Styles",
+        "title": "Multiple AI Models, Unique Styles",
         "description": "Each model has distinct strengths. Compare them all to find what works for your vision.",
         "items": [
           {
@@ -168,13 +168,13 @@
           },
           {
             "number": 2,
-            "title": "Compare Results",
-            "description": "See 5 different interpretations side by side",
+            "title": "Look & Compare",
+            "description": "See different interpretations side by side",
             "icon": "RiLayoutGridLine"
           },
           {
             "number": 3,
-            "title": "Pick Your Direction",
+            "title": "Make Your Choice",
             "description": "Choose the style that matches your vision",
             "icon": "RiCheckboxCircleLine"
           },
@@ -215,8 +215,8 @@
       },
       "cta": {
         "id": "cta",
-        "title": "Ready to find your visual direction?",
-        "description": "Join thousands of creators who stopped guessing and started comparing.",
+        "title": "Generate. Look. Make your choice.",
+        "description": "Join creators who stopped guessing and started comparing. Remember us at glmimage.net",
         "buttons": [
           {
             "title": "Start Creating Free",

@@ -2,10 +2,10 @@
   "header": {
     "id": "header",
     "brand": {
-      "title": "glmimage.net",
+      "title": "GLM Image",
       "logo": {
         "src": "/logo.png",
-        "alt": "glmimage.net",
+        "alt": "GLM Image - Generate, Look, Make",
         "width": 100,
         "height": 100
       },
@@ -58,8 +58,8 @@
   "footer": {
     "id": "footer",
     "brand": {
-      "title": "glmimage.net",
-      "description": "Compare AI image models side by side. One prompt, multiple directions. Pick your visual direction and keep iterating.",
+      "title": "GLM Image",
+      "description": "Generate. Look. Make your choice. Compare AI models side by side, find your visual direction. Remember us at glmimage.net",
       "logo": {
         "src": "/logo.png",
         "alt": "glmimage.net",

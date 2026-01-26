@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "glmimage.net",
-    "description": "AI图像模型对比工具。一个提示词，多种风格方向。选择你的视觉方向，持续迭代优化。",
-    "keywords": "ai图像生成, 图像对比, flux, recraft, ideogram, stable diffusion"
+    "title": "格灵美 GLM Image - 生成、对比、选定",
+    "description": "格灵美 (glmimage.net) - AI图像模型对比工具。生成多种方案，对比不同风格，选定最佳方向。更快找到你的视觉方向。",
+    "keywords": "格灵美, glm image, ai图像生成, 图像对比, flux, recraft, ideogram, gemini, ai艺术对比"
   },
   "sign": {
     "sign_in_title": "登录",

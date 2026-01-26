@@ -12,9 +12,9 @@
     "sections": {
       "hero": {
         "id": "hero",
-        "title": "一个提示词，多种风格方向",
-        "highlight_text": "多种风格方向",
-        "description": "不再猜测哪个 AI 模型适合你。<br/>5 个模型并排对比，选定方向，迭代到完美。",
+        "title": "生成、对比、选定 — 格灵美",
+        "highlight_text": "格灵美",
+        "description": "GLM Image — 最快找到你的视觉方向。<br/>多模型并排对比，选定方向，迭代到完美。",
         "tip": "🎉 新用户赠送 10 积分 - 无需绑定信用卡",
         "buttons": [
           {
@@ -124,7 +124,7 @@
       },
       "features": {
         "id": "features",
-        "title": "5 个模型，5 种独特风格",
+        "title": "多模型对比，多种独特风格",
         "description": "每个模型各有所长。全部对比，找到最适合你视觉需求的。",
         "items": [
           {
@@ -168,13 +168,13 @@
           },
           {
             "number": 2,
-            "title": "对比结果",
-            "description": "同时看到 5 种不同的诠释",
+            "title": "对比查看",
+            "description": "同时看到多种不同的诠释",
             "icon": "RiLayoutGridLine"
           },
           {
             "number": 3,
-            "title": "选定方向",
+            "title": "做出选择",
             "description": "选择最符合你视觉想法的风格",
             "icon": "RiCheckboxCircleLine"
           },
@@ -215,8 +215,8 @@
       },
       "cta": {
         "id": "cta",
-        "title": "准备好找到你的视觉方向了吗？",
-        "description": "加入数千名创作者，不再盲目尝试，开始智能对比。",
+        "title": "生成、对比、选定 — 格灵美",
+        "description": "加入创作者行列，不再盲目尝试。记住我们：glmimage.net",
         "buttons": [
           {
             "title": "免费开始创作",
