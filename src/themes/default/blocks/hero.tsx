@@ -1,5 +1,7 @@
+'use client';
+
 import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 
 import { Link } from '@/core/i18n/navigation';
 import { SmartIcon } from '@/shared/blocks/common';
@@ -27,11 +29,18 @@ export function Hero({
     <section
       id={section.id}
       className={cn(
-        `pt-24 pb-8 md:pt-36 md:pb-8`,
+        `relative pt-24 pb-16 md:pt-36 md:pb-24 overflow-hidden`,
         section.className,
         className
       )}
     >
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
+        <div className="absolute top-0 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-primary/5 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+      </div>
+
       {section.announcement && (
         <Link
           href={section.announcement.url || ''}
@@ -57,8 +66,14 @@ export function Hero({
       )}
 
       <div className="relative mx-auto max-w-full px-4 text-center md:max-w-5xl">
+        {/* GLM Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
+          <Sparkles className="w-4 h-4" />
+          <span>GLM = Generate, Look, Make</span>
+        </div>
+
         {texts && texts.length > 0 ? (
-          <h1 className="text-foreground text-4xl font-semibold text-balance sm:mt-12 sm:text-6xl">
+          <h1 className="text-foreground text-4xl font-bold tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl">
             {texts[0]}
             <Highlighter action="underline" color="#FF9800">
               {highlightText}
@@ -66,28 +81,31 @@ export function Hero({
             {texts[1]}
           </h1>
         ) : (
-          <h1 className="text-foreground text-4xl font-semibold text-balance sm:mt-12 sm:text-6xl">
+          <h1 className="text-foreground text-4xl font-bold tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl">
             {section.title}
           </h1>
         )}
 
         <p
-          className="text-muted-foreground mt-8 mb-8 text-lg text-balance"
+          className="text-muted-foreground mt-6 md:mt-8 text-lg md:text-xl text-balance max-w-2xl mx-auto"
           dangerouslySetInnerHTML={{ __html: section.description ?? '' }}
         />
 
         {section.buttons && (
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 md:mt-10">
             {section.buttons.map((button, idx) => (
               <Button
                 asChild
-                size={button.size || 'default'}
+                size="lg"
                 variant={button.variant || 'default'}
-                className="px-4 text-sm"
+                className={cn(
+                  "px-8 py-6 text-base font-medium transition-all duration-300",
+                  idx === 0 && "shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:scale-105"
+                )}
                 key={idx}
               >
                 <Link href={button.url ?? ''} target={button.target ?? '_self'}>
-                  {button.icon && <SmartIcon name={button.icon as string} />}
+                  {button.icon && <SmartIcon name={button.icon as string} className="mr-2" />}
                   <span>{button.title}</span>
                 </Link>
               </Button>
