@@ -2,7 +2,10 @@
   "page": {
     "show_sections": [
       "hero",
+      "social-proof",
+      "gallery",
       "features",
+      "how-it-works",
       "faq",
       "cta"
     ],
@@ -11,11 +14,11 @@
         "id": "hero",
         "title": "One prompt. Multiple directions.",
         "highlight_text": "Multiple directions",
-        "description": "Stop guessing which AI model suits your vision.<br/>Compare side by side, pick your direction, iterate until perfect.",
-        "tip": "Start with 10 free credits",
+        "description": "Stop guessing which AI model suits your vision.<br/>Compare 5 AI models side by side, pick your direction, iterate until perfect.",
+        "tip": "🎉 Start with 10 free credits - No credit card required",
         "buttons": [
           {
-            "title": "Start Creating",
+            "title": "Start Creating Free",
             "icon": "Sparkles",
             "url": "/compare",
             "target": "_self",
@@ -36,64 +39,187 @@
           "alt": "AI image generation abstract background"
         }
       },
+      "social-proof": {
+        "id": "social-proof",
+        "block": "social-proof",
+        "stats": [
+          {
+            "value": "5",
+            "label": "AI Models",
+            "icon": "RiRobot2Line"
+          },
+          {
+            "value": "10K+",
+            "label": "Images Generated",
+            "icon": "RiImageLine"
+          },
+          {
+            "value": "< 30s",
+            "label": "Generation Time",
+            "icon": "RiTimerLine"
+          },
+          {
+            "value": "100%",
+            "label": "Owned by You",
+            "icon": "RiShieldCheckLine"
+          }
+        ]
+      },
+      "gallery": {
+        "id": "gallery",
+        "block": "gallery",
+        "title": "See What's Possible",
+        "description": "Real examples generated with our multi-model comparison. Hover to see prompts.",
+        "tip": "All images above were created by comparing different AI models",
+        "items": [
+          {
+            "src": "/imgs/gallery/sample-1.svg",
+            "alt": "AI generated portrait",
+            "prompt": "A professional headshot of a confident businesswoman, studio lighting",
+            "model": "Flux Pro"
+          },
+          {
+            "src": "/imgs/gallery/sample-2.svg",
+            "alt": "AI generated landscape",
+            "prompt": "Mystical forest with glowing mushrooms, fantasy art style",
+            "model": "Recraft"
+          },
+          {
+            "src": "/imgs/gallery/sample-3.svg",
+            "alt": "AI generated product",
+            "prompt": "Minimalist product photography of a perfume bottle, white background",
+            "model": "Flux Pro"
+          },
+          {
+            "src": "/imgs/gallery/sample-4.svg",
+            "alt": "AI generated logo",
+            "prompt": "Modern tech startup logo, geometric shapes, blue gradient",
+            "model": "Ideogram"
+          },
+          {
+            "src": "/imgs/gallery/sample-5.svg",
+            "alt": "AI generated illustration",
+            "prompt": "Cute cartoon cat wearing a space helmet, kawaii style",
+            "model": "Gemini"
+          },
+          {
+            "src": "/imgs/gallery/sample-6.svg",
+            "alt": "AI generated art",
+            "prompt": "Abstract expressionist painting, bold colors, textured brush strokes",
+            "model": "Flux Dev"
+          },
+          {
+            "src": "/imgs/gallery/sample-7.svg",
+            "alt": "AI generated scene",
+            "prompt": "Cozy coffee shop interior, warm lighting, rainy day outside",
+            "model": "Recraft"
+          },
+          {
+            "src": "/imgs/gallery/sample-8.svg",
+            "alt": "AI generated character",
+            "prompt": "Cyberpunk character portrait, neon lights, detailed armor",
+            "model": "Flux Pro"
+          }
+        ]
+      },
       "features": {
         "id": "features",
-        "title": "5 AI Models, 5 Styles",
-        "description": "Each model has unique strengths. Find yours.",
+        "title": "5 AI Models, 5 Unique Styles",
+        "description": "Each model has distinct strengths. Compare them all to find what works for your vision.",
         "items": [
           {
             "title": "Flux Pro",
-            "description": "Photorealistic with stunning detail. Best for product shots and portraits.",
+            "description": "Photorealistic with stunning detail. Best for product shots, portraits, and professional photography.",
             "icon": "RiCameraLensFill"
           },
           {
             "title": "Flux Dev",
-            "description": "Balanced quality and speed. Great for general-purpose generation.",
+            "description": "Balanced quality and speed. Great for general-purpose generation and quick iterations.",
             "icon": "RiLightbulbFlashLine"
           },
           {
             "title": "Recraft",
-            "description": "Design-focused with clean aesthetics. Perfect for illustrations.",
+            "description": "Design-focused with clean aesthetics. Perfect for illustrations and graphic design.",
             "icon": "RiBrushLine"
           },
           {
             "title": "Ideogram",
-            "description": "Excellent text rendering. Ideal for logos and posters.",
+            "description": "Excellent text rendering. Ideal for logos, posters, and designs with typography.",
             "icon": "RiText"
           },
           {
             "title": "Gemini",
-            "description": "Google's latest image model. Creative and versatile output.",
+            "description": "Google's latest image model. Creative and versatile for unique artistic outputs.",
             "icon": "RiGoogleFill"
+          }
+        ]
+      },
+      "how-it-works": {
+        "id": "how-it-works",
+        "block": "how-it-works",
+        "title": "How It Works",
+        "description": "From idea to perfect image in 4 simple steps",
+        "steps": [
+          {
+            "number": 1,
+            "title": "Enter Your Prompt",
+            "description": "Describe what you want to create",
+            "icon": "RiEdit2Line"
+          },
+          {
+            "number": 2,
+            "title": "Compare Results",
+            "description": "See 5 different interpretations side by side",
+            "icon": "RiLayoutGridLine"
+          },
+          {
+            "number": 3,
+            "title": "Pick Your Direction",
+            "description": "Choose the style that matches your vision",
+            "icon": "RiCheckboxCircleLine"
+          },
+          {
+            "number": 4,
+            "title": "Iterate & Perfect",
+            "description": "Refine with the selected model until perfect",
+            "icon": "RiLoopLeftLine"
           }
         ]
       },
       "faq": {
         "id": "faq",
-        "title": "FAQ",
+        "title": "Frequently Asked Questions",
         "description": "",
         "items": [
           {
             "question": "How much does it cost?",
-            "answer": "Compare (4 models) costs 12 credits. Single model iteration costs 2-4 credits. New users get 10 free credits."
+            "answer": "Comparing all 5 models costs 15 credits. Single model iteration costs 2-4 credits. New users get 10 free credits to start - no credit card required."
           },
           {
             "question": "Can I download the images?",
-            "answer": "Yes! All images are yours. No watermarks, full resolution, instant download."
+            "answer": "Yes! All images are 100% yours. No watermarks, full resolution, instant download. Use them anywhere - commercial use allowed."
           },
           {
             "question": "What happens after I pick a direction?",
-            "answer": "You enter iteration mode. Keep refining with the same model until perfect."
+            "answer": "You enter iteration mode. Keep refining your image with the same model until it's exactly what you want. Each iteration costs only 2-4 credits."
+          },
+          {
+            "question": "Which AI model should I choose?",
+            "answer": "That's what we help you discover! Each model has unique strengths - Flux Pro for photorealism, Recraft for illustrations, Ideogram for text/logos. Compare them all and pick what works best for your vision."
+          },
+          {
+            "question": "How fast is the generation?",
+            "answer": "Most images are ready in under 30 seconds. You'll see all 5 model results appearing as they complete - no need to wait for all of them."
           }
         ]
       },
       "cta": {
         "id": "cta",
-        "title": "Ready to find your style?",
-        "description": "",
+        "title": "Ready to find your visual direction?",
+        "description": "Join thousands of creators who stopped guessing and started comparing.",
         "buttons": [
           {
-            "title": "Start Creating",
+            "title": "Start Creating Free",
             "url": "/compare",
             "target": "_self",
             "icon": "Sparkles"

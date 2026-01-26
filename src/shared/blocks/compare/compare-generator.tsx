@@ -20,6 +20,16 @@ import { ComparisonGrid } from './comparison-grid';
 const POLL_INTERVAL = 5000; // 5 seconds
 const POLL_TIMEOUT = 180000; // 3 minutes
 
+// Example prompts to inspire users
+const EXAMPLE_PROMPTS = [
+  'Professional headshot, studio lighting, confident businesswoman',
+  'Minimalist product photo, perfume bottle, white background',
+  'Modern tech startup logo, geometric shapes, blue gradient',
+  'Cozy coffee shop interior, warm lighting, rainy day outside',
+  'Cute cartoon cat in a space helmet, kawaii style',
+  'Cyberpunk cityscape at night, neon lights, flying cars',
+];
+
 export function CompareGenerator() {
   const { user, setIsShowSignModal } = useAppContext();
 
@@ -234,6 +244,25 @@ export function CompareGenerator() {
           disabled={isGenerating}
           maxLength={2000}
         />
+
+        {/* Example prompts - only show when not in iteration mode and no prompt entered */}
+        {!iterationModel && !prompt && tasks.length === 0 && (
+          <div className="space-y-2">
+            <p className="text-xs text-muted-foreground">Try an example:</p>
+            <div className="flex flex-wrap gap-2">
+              {EXAMPLE_PROMPTS.map((example, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setPrompt(example)}
+                  className="text-xs px-3 py-1.5 rounded-full bg-muted hover:bg-muted/80 text-muted-foreground hover:text-foreground transition-colors border border-transparent hover:border-border"
+                  disabled={isGenerating}
+                >
+                  {example.length > 40 ? example.slice(0, 40) + '...' : example}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="flex items-center justify-between">
           <span className="text-xs text-muted-foreground">
