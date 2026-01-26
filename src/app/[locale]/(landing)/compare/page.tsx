@@ -17,20 +17,13 @@ export default async function ComparePage({
   setRequestLocale(locale);
 
   return (
-    <main className="min-h-screen bg-background">
-      {/* Minimal header */}
-      <header className="border-b">
-        <div className="container mx-auto px-4 py-4">
-          <h1 className="text-xl font-semibold">glmimage.net</h1>
-        </div>
-      </header>
-
+    <main className="min-h-screen bg-background pt-8">
       {/* Main content */}
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-3xl mx-auto mb-8 text-center">
-          <h2 className="text-2xl font-bold mb-2">
+          <h1 className="text-2xl font-bold mb-2">
             One prompt. Multiple directions.
-          </h2>
+          </h1>
           <p className="text-muted-foreground">
             Compare different AI models side by side. Pick a direction. Keep iterating.
           </p>
