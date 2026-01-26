@@ -73,52 +73,52 @@
         "tip": "以上图片均由对比不同 AI 模型后创作",
         "items": [
           {
-            "src": "/imgs/gallery/sample-1.svg",
+            "src": "/imgs/gallery/sample-1.png",
             "alt": "AI 生成的人像",
             "prompt": "自信的女企业家职业头像，影棚灯光",
-            "model": "Flux Pro"
+            "model": "Gemini"
           },
           {
-            "src": "/imgs/gallery/sample-2.svg",
+            "src": "/imgs/gallery/sample-2.png",
             "alt": "AI 生成的风景",
             "prompt": "神秘森林中发光的蘑菇，奇幻艺术风格",
-            "model": "Recraft"
+            "model": "Gemini"
           },
           {
-            "src": "/imgs/gallery/sample-3.svg",
+            "src": "/imgs/gallery/sample-3.png",
             "alt": "AI 生成的产品",
             "prompt": "极简产品摄影，香水瓶，白色背景",
-            "model": "Flux Pro"
+            "model": "Gemini"
           },
           {
-            "src": "/imgs/gallery/sample-4.svg",
+            "src": "/imgs/gallery/sample-4.png",
             "alt": "AI 生成的 Logo",
             "prompt": "现代科技创业公司 Logo，几何形状，蓝色渐变",
-            "model": "Ideogram"
+            "model": "Gemini"
           },
           {
-            "src": "/imgs/gallery/sample-5.svg",
+            "src": "/imgs/gallery/sample-5.png",
             "alt": "AI 生成的插画",
             "prompt": "戴着太空头盔的可爱卡通猫，卡哇伊风格",
             "model": "Gemini"
           },
           {
-            "src": "/imgs/gallery/sample-6.svg",
+            "src": "/imgs/gallery/sample-6.png",
             "alt": "AI 生成的艺术",
             "prompt": "抽象表现主义画作，大胆色彩，纹理笔触",
-            "model": "Flux Dev"
+            "model": "Gemini"
           },
           {
-            "src": "/imgs/gallery/sample-7.svg",
+            "src": "/imgs/gallery/sample-7.png",
             "alt": "AI 生成的场景",
             "prompt": "温馨咖啡厅内景，暖色灯光，窗外下着雨",
-            "model": "Recraft"
+            "model": "Gemini"
           },
           {
-            "src": "/imgs/gallery/sample-8.svg",
+            "src": "/imgs/gallery/sample-8.png",
             "alt": "AI 生成的角色",
             "prompt": "赛博朋克角色肖像，霓虹灯光，精致盔甲",
-            "model": "Flux Pro"
+            "model": "Gemini"
           }
         ]
       },

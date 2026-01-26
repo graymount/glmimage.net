@@ -73,52 +73,52 @@
         "tip": "All images above were created by comparing different AI models",
         "items": [
           {
-            "src": "/imgs/gallery/sample-1.svg",
+            "src": "/imgs/gallery/sample-1.png",
             "alt": "AI generated portrait",
             "prompt": "A professional headshot of a confident businesswoman, studio lighting",
-            "model": "Flux Pro"
+            "model": "Gemini"
           },
           {
-            "src": "/imgs/gallery/sample-2.svg",
+            "src": "/imgs/gallery/sample-2.png",
             "alt": "AI generated landscape",
             "prompt": "Mystical forest with glowing mushrooms, fantasy art style",
-            "model": "Recraft"
+            "model": "Gemini"
           },
           {
-            "src": "/imgs/gallery/sample-3.svg",
+            "src": "/imgs/gallery/sample-3.png",
             "alt": "AI generated product",
             "prompt": "Minimalist product photography of a perfume bottle, white background",
-            "model": "Flux Pro"
+            "model": "Gemini"
           },
           {
-            "src": "/imgs/gallery/sample-4.svg",
+            "src": "/imgs/gallery/sample-4.png",
             "alt": "AI generated logo",
             "prompt": "Modern tech startup logo, geometric shapes, blue gradient",
-            "model": "Ideogram"
+            "model": "Gemini"
           },
           {
-            "src": "/imgs/gallery/sample-5.svg",
+            "src": "/imgs/gallery/sample-5.png",
             "alt": "AI generated illustration",
             "prompt": "Cute cartoon cat wearing a space helmet, kawaii style",
             "model": "Gemini"
           },
           {
-            "src": "/imgs/gallery/sample-6.svg",
+            "src": "/imgs/gallery/sample-6.png",
             "alt": "AI generated art",
             "prompt": "Abstract expressionist painting, bold colors, textured brush strokes",
-            "model": "Flux Dev"
+            "model": "Gemini"
           },
           {
-            "src": "/imgs/gallery/sample-7.svg",
+            "src": "/imgs/gallery/sample-7.png",
             "alt": "AI generated scene",
             "prompt": "Cozy coffee shop interior, warm lighting, rainy day outside",
-            "model": "Recraft"
+            "model": "Gemini"
           },
           {
-            "src": "/imgs/gallery/sample-8.svg",
+            "src": "/imgs/gallery/sample-8.png",
             "alt": "AI generated character",
             "prompt": "Cyberpunk character portrait, neon lights, detailed armor",
-            "model": "Flux Pro"
+            "model": "Gemini"
           }
         ]
       },
