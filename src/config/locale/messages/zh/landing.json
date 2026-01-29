@@ -62,9 +62,9 @@
       "description": "生成、对比、选定。多模型并排对比，找到你的视觉方向。记住我们：glmimage.net",
       "logo": {
         "src": "/logo.png",
-        "alt": "glmimage.net",
-        "width": 1024,
-        "height": 1024
+        "alt": "格灵美 GLM Image - 生成、对比、选定",
+        "width": 100,
+        "height": 100
       },
       "url": "/"
     },
