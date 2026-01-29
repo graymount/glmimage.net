@@ -38,9 +38,9 @@ export function SignIn({
 
   const isGoogleAuthEnabled = configs.google_auth_enabled === 'true';
   const isGithubAuthEnabled = configs.github_auth_enabled === 'true';
+  const hasSocialProviders = isGoogleAuthEnabled || isGithubAuthEnabled;
   const isEmailAuthEnabled =
-    configs.email_auth_enabled !== 'false' ||
-    (!isGoogleAuthEnabled && !isGithubAuthEnabled); // no social providers enabled, auto enable email auth
+    configs.email_auth_enabled === 'true' || !hasSocialProviders; // fallback to email if no social providers
 
   if (callbackUrl) {
     const locale = useLocale();
