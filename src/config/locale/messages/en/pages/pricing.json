@@ -1,10 +1,10 @@
 {
   "metadata": {
     "title": "Pricing",
-    "description": "Start with a plan"
+    "description": "Simple, transparent pricing for AI image generation"
   },
   "page": {
-    "title": "glmimage.net Pricing",
+    "title": "Simple Pricing, Powerful Results",
     "sections": {
       "pricing": {
         "id": "pricing",
@@ -12,140 +12,37 @@
         "description": "Compare AI image models side by side. Pick your visual direction.",
         "groups": [
           {
-            "name": "one-time",
-            "title": "Pay as you go"
-          },
-          {
             "name": "monthly",
             "title": "Monthly",
-            "is_featured": true,
-            "label": "save 15%"
+            "is_featured": true
           },
           {
             "name": "yearly",
-            "title": "Annually"
+            "title": "Annually",
+            "label": "save 20%"
           }
         ],
         "items": [
           {
             "title": "Starter",
-            "description": "Get started with your first SaaS startup.",
+            "description": "Perfect for trying out multi-model comparison.",
             "features_title": "Includes",
             "features": [
-              "100 credits, valid for 1 month",
-              "NextJS boilerplate",
-              "SEO-friendly structure",
-              "Payment with Stripe",
-              "Data storage with Supabase",
-              "Google Oauth & One-Tap Login",
-              "i18n support"
-            ],
-            "interval": "one-time",
-            "amount": 9900,
-            "currency": "USD",
-            "price": "$99",
-            "original_price": "$199",
-            "unit": "",
-            "is_featured": false,
-            "tip": "Pay once. Build unlimited projects!",
-            "button": {
-              "title": "Get Started",
-              "url": "/#pricing",
-              "icon": "RiFlashlightFill"
-            },
-            "product_id": "starter",
-            "product_name": "glmimage.net Starter",
-            "credits": 100,
-            "valid_days": 30,
-            "group": "one-time"
-          },
-          {
-            "title": "Standard",
-            "description": "Ship Fast with your SaaS Startups.",
-            "label": "Popular",
-            "features_title": "Everything in Starter, plus",
-            "features": [
-              "200 credits, valid for 3 month",
-              "Deploy with Vercel or Cloudflare",
-              "Generation of Privacy & Terms",
-              "Google Analytics Integration",
-              "Google Search Console Integration",
-              "Discord community",
-              "Technical support for your first ship",
-              "Lifetime updates"
-            ],
-            "interval": "one-time",
-            "amount": 19900,
-            "currency": "USD",
-            "price": "$199",
-            "original_price": "$299",
-            "unit": "",
-            "is_featured": true,
-            "tip": "Pay once. Build unlimited projects!",
-            "button": {
-              "title": "Get Started",
-              "url": "/#pricing",
-              "icon": "RiFlashlightFill"
-            },
-            "product_id": "standard",
-            "product_name": "glmimage.net Standard",
-            "credits": 200,
-            "valid_days": 90,
-            "group": "one-time"
-          },
-          {
-            "title": "Premium",
-            "description": "Ship Any AI SaaS Startups.",
-            "features_title": "Everything in Standard, plus",
-            "features": [
-              "300 credits, valid for 1 year",
-              "Business Functions with AI",
-              "User Center",
-              "Credits System",
-              "API Sales for your SaaS",
-              "Admin System",
-              "Priority Technical Support"
-            ],
-            "interval": "one-time",
-            "amount": 29900,
-            "currency": "USD",
-            "price": "$299",
-            "original_price": "$399",
-            "unit": "",
-            "is_featured": false,
-            "tip": "Pay once. Build unlimited projects!",
-            "button": {
-              "title": "Get Started",
-              "url": "/#pricing",
-              "icon": "RiFlashlightFill"
-            },
-            "product_id": "premium",
-            "product_name": "glmimage.net Premium",
-            "credits": 300,
-            "valid_days": 365,
-            "group": "one-time"
-          },
-          {
-            "title": "Starter",
-            "description": "Get started with your first SaaS startup.",
-            "features_title": "Includes",
-            "features": [
-              "100 credits, valid for 1 month",
-              "NextJS boilerplate",
-              "SEO-friendly structure",
-              "Payment with Stripe",
-              "Data storage with Supabase",
-              "Google Oauth & One-Tap Login",
-              "i18n support"
+              "100 credits per month",
+              "Compare 5 AI models side by side",
+              "Flux Pro, Recraft, Ideogram, Gemini & more",
+              "Full resolution download, no watermarks",
+              "Commercial use rights",
+              "Iteration mode"
             ],
             "interval": "month",
-            "amount": 8900,
+            "amount": 900,
             "currency": "USD",
-            "price": "$89",
-            "original_price": "$99",
+            "price": "$9",
+            "original_price": "$12",
             "unit": "/ month",
             "is_featured": false,
-            "tip": "Pay monthly. Build unlimited projects!",
+            "tip": "~6 comparisons or ~33 iterations per month",
             "button": {
               "title": "Get Started",
               "url": "/#pricing",
@@ -160,27 +57,23 @@
           },
           {
             "title": "Standard",
-            "description": "Ship Fast with your SaaS Startups.",
+            "description": "For creators who compare regularly.",
             "label": "Popular",
             "features_title": "Everything in Starter, plus",
             "features": [
-              "200 credits, valid for 1 month",
-              "Deploy with Vercel or Cloudflare",
-              "Generation of Privacy & Terms",
-              "Google Analytics Integration",
-              "Google Search Console Integration",
-              "Discord community",
-              "Technical support for your first ship",
-              "Lifetime updates"
+              "300 credits per month (3x more)",
+              "~20 full comparisons per month",
+              "~100 single model iterations",
+              "Priority email support"
             ],
             "interval": "month",
-            "amount": 16900,
+            "amount": 1900,
             "currency": "USD",
-            "price": "$169",
-            "original_price": "$199",
+            "price": "$19",
+            "original_price": "$29",
             "unit": "/ month",
             "is_featured": true,
-            "tip": "Pay monthly. Ship Fast with your SaaS Startups.",
+            "tip": "~20 comparisons or ~100 iterations per month",
             "button": {
               "title": "Get Started",
               "url": "/#pricing",
@@ -188,32 +81,29 @@
             },
             "product_id": "standard-monthly",
             "product_name": "glmimage.net Standard Monthly",
-            "credits": 200,
+            "credits": 300,
             "valid_days": 30,
             "group": "monthly",
             "plan_name": "Standard"
           },
           {
             "title": "Premium",
-            "description": "Ship Any AI SaaS Startups.",
+            "description": "For professionals with heavy generation needs.",
             "features_title": "Everything in Standard, plus",
             "features": [
-              "300 credits, valid for 1 month",
-              "Business Functions with AI",
-              "User Center",
-              "Credits System",
-              "API Sales for your SaaS",
-              "Admin System",
-              "Priority Technical Support"
+              "800 credits per month (8x Starter)",
+              "~53 full comparisons per month",
+              "~267 single model iterations",
+              "Priority support"
             ],
             "interval": "month",
-            "amount": 24900,
+            "amount": 3900,
             "currency": "USD",
-            "price": "$249",
-            "original_price": "$299",
+            "price": "$39",
+            "original_price": "$59",
             "unit": "/ month",
             "is_featured": false,
-            "tip": "Pay monthly. Ship Any AI SaaS Startups.",
+            "tip": "~53 comparisons or ~267 iterations per month",
             "button": {
               "title": "Get Started",
               "url": "/#pricing",
@@ -221,32 +111,31 @@
             },
             "product_id": "premium-monthly",
             "product_name": "glmimage.net Premium Monthly",
-            "credits": 300,
+            "credits": 800,
             "valid_days": 30,
             "group": "monthly",
             "plan_name": "Premium"
           },
           {
             "title": "Starter",
-            "description": "Get started with your first SaaS startup.",
+            "description": "Perfect for trying out multi-model comparison.",
             "features_title": "Includes",
             "features": [
-              "100 credits, valid for 1 year",
-              "NextJS boilerplate",
-              "SEO-friendly structure",
-              "Payment with Stripe",
-              "Data storage with Supabase",
-              "Google Oauth & One-Tap Login",
-              "i18n support"
+              "100 credits per month (1,200/year)",
+              "Compare 5 AI models side by side",
+              "Flux Pro, Recraft, Ideogram, Gemini & more",
+              "Full resolution download, no watermarks",
+              "Commercial use rights",
+              "Iteration mode"
             ],
             "interval": "year",
-            "amount": 82800,
+            "amount": 8400,
             "currency": "USD",
-            "price": "$69",
-            "original_price": "$89",
+            "price": "$7",
+            "original_price": "$9",
             "unit": "/ month",
             "is_featured": false,
-            "tip": "Pay annually. Build unlimited projects!",
+            "tip": "~6 comparisons or ~33 iterations per month",
             "button": {
               "title": "Get Started",
               "url": "/#pricing",
@@ -261,27 +150,23 @@
           },
           {
             "title": "Standard",
-            "description": "Ship Fast with your SaaS Startups.",
+            "description": "For creators who compare regularly.",
             "label": "Popular",
             "features_title": "Everything in Starter, plus",
             "features": [
-              "200 credits, valid for 1 year",
-              "Deploy with Vercel or Cloudflare",
-              "Generation of Privacy & Terms",
-              "Google Analytics Integration",
-              "Google Search Console Integration",
-              "Discord community",
-              "Technical support for your first ship",
-              "Lifetime updates"
+              "300 credits per month (3,600/year)",
+              "~20 full comparisons per month",
+              "~100 single model iterations",
+              "Priority email support"
             ],
             "interval": "year",
-            "amount": 154800,
+            "amount": 18000,
             "currency": "USD",
-            "price": "$129",
-            "original_price": "$169",
+            "price": "$15",
+            "original_price": "$19",
             "unit": "/ month",
             "is_featured": true,
-            "tip": "Pay annually. Ship Fast with your SaaS Startups.",
+            "tip": "~20 comparisons or ~100 iterations per month",
             "button": {
               "title": "Get Started",
               "url": "/#pricing",
@@ -289,32 +174,29 @@
             },
             "product_id": "standard-yearly",
             "product_name": "glmimage.net Standard Annually",
-            "credits": 2400,
+            "credits": 3600,
             "valid_days": 365,
             "group": "yearly",
             "plan_name": "Standard"
           },
           {
             "title": "Premium",
-            "description": "Ship Any AI SaaS Startups.",
+            "description": "For professionals with heavy generation needs.",
             "features_title": "Everything in Standard, plus",
             "features": [
-              "300 credits, valid for 1 year",
-              "Business Functions with AI",
-              "User Center",
-              "Credits System",
-              "API Sales for your SaaS",
-              "Admin System",
-              "Priority Technical Support"
+              "800 credits per month (9,600/year)",
+              "~53 full comparisons per month",
+              "~267 single model iterations",
+              "Priority support"
             ],
             "interval": "year",
-            "amount": 226800,
+            "amount": 34800,
             "currency": "USD",
-            "price": "$189",
-            "original_price": "$249",
+            "price": "$29",
+            "original_price": "$39",
             "unit": "/ month",
             "is_featured": false,
-            "tip": "Pay annually. Ship Any AI SaaS Startups.",
+            "tip": "~53 comparisons or ~267 iterations per month",
             "button": {
               "title": "Get Started",
               "url": "/#pricing",
@@ -322,7 +204,7 @@
             },
             "product_id": "premium-yearly",
             "product_name": "glmimage.net Premium Annually",
-            "credits": 3600,
+            "credits": 9600,
             "valid_days": 365,
             "group": "yearly",
             "plan_name": "Premium"
