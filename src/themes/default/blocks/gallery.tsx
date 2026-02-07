@@ -78,7 +78,7 @@ export function Gallery({
                   "opacity-0 group-hover:opacity-100 transition-all duration-300"
                 )}>
                   {item.model && (
-                    <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary mb-2 bg-primary/20 px-2 py-0.5 rounded-full w-fit">
+                    <span className="inline-flex items-center gap-1 text-xs font-semibold text-white mb-2 bg-white/20 px-2 py-0.5 rounded-full w-fit">
                       <Sparkles className="w-3 h-3" />
                       {item.model}
                     </span>
