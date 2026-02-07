@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { ArrowRight, Download, RotateCcw, Sparkles } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -20,6 +20,7 @@ import { DemoGrid } from './demo-grid';
 
 const POLL_INTERVAL = 5000; // 5 seconds
 const POLL_TIMEOUT = 180000; // 3 minutes
+const SESSION_STORAGE_KEY = 'glm-compare-session';
 
 // Example prompts to inspire users
 const EXAMPLE_PROMPTS = [
@@ -31,31 +32,72 @@ const EXAMPLE_PROMPTS = [
   'Cyberpunk cityscape at night, neon lights, flying cars',
 ];
 
+interface PersistedState {
+  prompt: string;
+  sessionId: string | null;
+  tasks: CompareTask[];
+  selectedTaskId: string | null;
+  history: { prompt: string; selectedTaskId: string; imageUrl?: string; modelLabel?: string; modelStyle?: string }[];
+  iterationModel: { model: string; label: string; style: string } | null;
+}
+
+function loadPersistedState(): PersistedState | null {
+  try {
+    const raw = sessionStorage.getItem(SESSION_STORAGE_KEY);
+    if (!raw) return null;
+    return JSON.parse(raw) as PersistedState;
+  } catch {
+    return null;
+  }
+}
+
+function savePersistedState(state: PersistedState) {
+  try {
+    sessionStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(state));
+  } catch {
+    // sessionStorage full or unavailable - ignore
+  }
+}
+
 export function CompareGenerator() {
   const { user, setIsShowSignModal } = useAppContext();
+  const initialized = useRef(false);
+
+  // Restore from sessionStorage on first render
+  const saved = useRef(initialized.current ? null : loadPersistedState());
 
   // Input state
-  const [prompt, setPrompt] = useState('');
+  const [prompt, setPrompt] = useState(saved.current?.prompt ?? '');
 
   // Session state
-  const [sessionId, setSessionId] = useState<string | null>(null);
-  const [tasks, setTasks] = useState<CompareTask[]>([]);
+  const [sessionId, setSessionId] = useState<string | null>(saved.current?.sessionId ?? null);
+  const [tasks, setTasks] = useState<CompareTask[]>(saved.current?.tasks ?? []);
   const [isGenerating, setIsGenerating] = useState(false);
 
   // Selection state
-  const [selectedTaskId, setSelectedTaskId] = useState<string | null>(null);
+  const [selectedTaskId, setSelectedTaskId] = useState<string | null>(saved.current?.selectedTaskId ?? null);
 
   // History for continuation
   const [history, setHistory] = useState<
     { prompt: string; selectedTaskId: string; imageUrl?: string; modelLabel?: string; modelStyle?: string }[]
-  >([]);
+  >(saved.current?.history ?? []);
 
   // Iteration mode - when user selects a direction and continues
   const [iterationModel, setIterationModel] = useState<{
     model: string;
     label: string;
     style: string;
-  } | null>(null);
+  } | null>(saved.current?.iterationModel ?? null);
+
+  // Mark as initialized
+  useEffect(() => {
+    initialized.current = true;
+  }, []);
+
+  // Persist state to sessionStorage on changes
+  useEffect(() => {
+    savePersistedState({ prompt, sessionId, tasks, selectedTaskId, history, iterationModel });
+  }, [prompt, sessionId, tasks, selectedTaskId, history, iterationModel]);
 
   // Calculate cost - single model cost when iterating, total when comparing
   const iterationCost = iterationModel
@@ -208,6 +250,7 @@ export function CompareGenerator() {
     setTasks([]);
     setSelectedTaskId(null);
     setHistory([]);
+    try { sessionStorage.removeItem(SESSION_STORAGE_KEY); } catch {}
   };
 
   return (
