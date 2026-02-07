@@ -29,3 +29,4 @@ export * from './page-detail';
 export * from './gallery';
 export * from './how-it-works';
 export * from './social-proof';
+export * from './compare-demo';

@@ -16,6 +16,7 @@ import {
 } from '@/shared/types/compare';
 
 import { ComparisonGrid } from './comparison-grid';
+import { DemoGrid } from './demo-grid';
 
 const POLL_INTERVAL = 5000; // 5 seconds
 const POLL_TIMEOUT = 180000; // 3 minutes
@@ -290,6 +291,11 @@ export function CompareGenerator() {
           </div>
         </div>
       </div>
+
+      {/* Demo grid - shown when no tasks yet */}
+      {tasks.length === 0 && !isGenerating && !iterationModel && (
+        <DemoGrid />
+      )}
 
       {/* Comparison grid */}
       {tasks.length > 0 && (

@@ -2,6 +2,7 @@
   "page": {
     "show_sections": [
       "hero",
+      "compare-demo",
       "social-proof",
       "gallery",
       "features",
@@ -15,7 +16,7 @@
         "title": "Generate. Look. Make your choice.",
         "highlight_text": "Make your choice",
         "description": "GLM Image — the fastest way to find your visual direction.<br/>Compare multiple AI models side by side, pick what works, iterate until perfect.",
-        "tip": "🎉 Start with 10 free credits - No credit card required",
+        "tip": "🎉 Start with 30 free credits - No credit card required",
         "buttons": [
           {
             "title": "Start Creating Free",
@@ -37,6 +38,39 @@
         "background_image": {
           "src": "/imgs/features/hero-bg.png",
           "alt": "AI image generation abstract background"
+        }
+      },
+      "compare-demo": {
+        "id": "compare-demo",
+        "block": "compare-demo",
+        "title": "Same Prompt, Different Styles",
+        "description": "See how different AI models interpret the same prompt — then pick your direction.",
+        "prompt": "A cozy coffee shop interior, warm lighting, rainy day outside",
+        "items": [
+          {
+            "src": "/imgs/gallery/sample-1.png",
+            "model": "Flux Pro",
+            "style": "Photorealistic"
+          },
+          {
+            "src": "/imgs/gallery/sample-3.png",
+            "model": "Recraft",
+            "style": "Design"
+          },
+          {
+            "src": "/imgs/gallery/sample-7.png",
+            "model": "Ideogram",
+            "style": "Typography"
+          },
+          {
+            "src": "/imgs/gallery/sample-2.png",
+            "model": "Gemini",
+            "style": "Creative"
+          }
+        ],
+        "cta": {
+          "title": "Try your own prompt",
+          "url": "/compare"
         }
       },
       "social-proof": {
@@ -76,7 +110,7 @@
             "src": "/imgs/gallery/sample-1.png",
             "alt": "AI generated portrait",
             "prompt": "A professional headshot of a confident businesswoman, studio lighting",
-            "model": "Gemini"
+            "model": "Flux Pro"
           },
           {
             "src": "/imgs/gallery/sample-2.png",
@@ -88,19 +122,19 @@
             "src": "/imgs/gallery/sample-3.png",
             "alt": "AI generated product",
             "prompt": "Minimalist product photography of a perfume bottle, white background",
-            "model": "Gemini"
+            "model": "Recraft"
           },
           {
             "src": "/imgs/gallery/sample-4.png",
             "alt": "AI generated logo",
             "prompt": "Modern tech startup logo, geometric shapes, blue gradient",
-            "model": "Gemini"
+            "model": "Ideogram"
           },
           {
             "src": "/imgs/gallery/sample-5.png",
             "alt": "AI generated illustration",
             "prompt": "Cute cartoon cat wearing a space helmet, kawaii style",
-            "model": "Gemini"
+            "model": "Flux Dev"
           },
           {
             "src": "/imgs/gallery/sample-6.png",
@@ -112,13 +146,13 @@
             "src": "/imgs/gallery/sample-7.png",
             "alt": "AI generated scene",
             "prompt": "Cozy coffee shop interior, warm lighting, rainy day outside",
-            "model": "Gemini"
+            "model": "Flux Pro"
           },
           {
             "src": "/imgs/gallery/sample-8.png",
             "alt": "AI generated character",
             "prompt": "Cyberpunk character portrait, neon lights, detailed armor",
-            "model": "Gemini"
+            "model": "Recraft"
           }
         ]
       },
@@ -193,7 +227,7 @@
         "items": [
           {
             "question": "How much does it cost?",
-            "answer": "Comparing all 5 models costs 15 credits. Single model iteration costs 2-4 credits. New users get 10 free credits to start - no credit card required."
+            "answer": "Comparing all 5 models costs 15 credits. Single model iteration costs 2-4 credits. New users get 30 free credits to start - enough for 2 full comparisons. No credit card required."
           },
           {
             "question": "Can I download the images?",
