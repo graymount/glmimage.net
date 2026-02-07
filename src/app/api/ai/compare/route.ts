@@ -24,11 +24,11 @@ export async function POST(request: Request) {
     // Calculate total cost
     const totalCost = COMPARE_MODELS.reduce((sum, m) => sum + m.cost, 0);
 
-    // Check credits (temporarily disabled for testing)
-    // const remainingCredits = await getRemainingCredits(user.id);
-    // if (remainingCredits < totalCost) {
-    //   throw new Error('insufficient credits');
-    // }
+    // Check credits
+    const remainingCredits = await getRemainingCredits(user.id);
+    if (remainingCredits < totalCost) {
+      throw new Error('insufficient credits');
+    }
 
     // Get AI service
     const aiService = await getAIService();
@@ -95,7 +95,7 @@ export async function POST(request: Request) {
         scene: 'text-to-image',
         options: null,
         status,
-        costCredits: 0, // TODO: restore to modelConfig.cost after testing
+        costCredits: status === 'failed' ? 0 : modelConfig.cost,
         taskId: providerTaskId,
         taskInfo,
         taskResult,
