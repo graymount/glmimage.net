@@ -123,6 +123,34 @@ V1 的唯一目标是：
 - 首页与核心页面需完全自定义
 - UI 极度克制，避免功能堆叠
 
+### 技术栈
+- **框架**: Next.js (App Router)
+- **认证**: better-auth（支持 Google OAuth、Email/Password）
+- **数据库**: PostgreSQL (Neon)，ORM 使用 Drizzle
+- **样式**: Tailwind CSS + shadcn/ui
+- **部署**: Vercel
+- **包管理**: pnpm
+
+### 域名与环境
+- **生产域名**: `https://www.glmimage.net`（带 www，DNS 自动重定向）
+- **Google OAuth 回调**: `https://www.glmimage.net/api/auth/callback/google`
+- **Google Cloud 项目**: AIImage (`aiimage-471212`)
+- **环境变量**: 本地 `.env.local`，生产 Vercel Environment Variables
+- **注意**: `NEXT_PUBLIC_APP_URL` 必须与实际域名一致（含 www）
+
+### 关键目录结构
+- `src/core/auth/` — 认证核心（config.ts, client.ts, index.ts）
+- `src/shared/blocks/sign/` — 登录/注册 UI 组件
+- `src/shared/services/settings.ts` — 系统设置定义（含 Google OAuth 开关）
+- `src/shared/models/config.ts` — 数据库配置读取
+- `src/shared/services/rbac.ts` — 角色权限管理
+- `src/app/api/auth/[...all]/route.ts` — 认证 API 路由
+- `scripts/` — 运维脚本（init-rbac, assign-role 等）
+
+### 管理员
+- **Super Admin**: wnfng.liu@gmail.com
+- **管理后台**: `/admin`（需 super_admin 或 admin 角色）
+
 ---
 
 ## 10. 成功指标（必须监控）
