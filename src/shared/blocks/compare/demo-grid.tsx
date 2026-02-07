@@ -9,27 +9,27 @@ const DEMO_TASKS = [
   {
     model: 'Flux Pro',
     style: 'Photorealistic',
-    src: '/imgs/gallery/sample-1.png',
+    src: '/imgs/gallery/compare/product-flux-pro.jpg',
   },
   {
     model: 'Flux Dev',
     style: 'Balanced',
-    src: '/imgs/gallery/sample-5.png',
+    src: '/imgs/gallery/compare/product-flux-dev.jpg',
   },
   {
     model: 'Recraft',
     style: 'Design',
-    src: '/imgs/gallery/sample-3.png',
+    src: '/imgs/gallery/compare/product-recraft.webp',
   },
   {
     model: 'Ideogram',
     style: 'Typography',
-    src: '/imgs/gallery/sample-4.png',
+    src: '/imgs/gallery/compare/product-ideogram.png',
   },
   {
     model: 'Gemini',
     style: 'Creative',
-    src: '/imgs/gallery/sample-2.png',
+    src: '/imgs/gallery/compare/product-gemini.png',
   },
 ];
 
@@ -41,7 +41,7 @@ export function DemoGrid() {
           Here&apos;s what a comparison looks like
         </p>
         <p className="text-xs text-muted-foreground/70 italic">
-          &ldquo;Professional headshot, studio lighting, confident businesswoman&rdquo;
+          &ldquo;Minimalist luxury skincare product on marble surface, soft studio lighting&rdquo;
         </p>
       </div>
 

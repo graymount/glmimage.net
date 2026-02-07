@@ -45,25 +45,25 @@
         "block": "compare-demo",
         "title": "Same Prompt, Different Styles",
         "description": "See how different AI models interpret the same prompt — then pick your direction.",
-        "prompt": "A cozy coffee shop interior, warm lighting, rainy day outside",
+        "prompt": "Modern tech startup logo, letter M, clean geometric, gradient purple to blue",
         "items": [
           {
-            "src": "/imgs/gallery/sample-1.png",
+            "src": "/imgs/gallery/compare/logo-flux-pro.jpg",
             "model": "Flux Pro",
             "style": "Photorealistic"
           },
           {
-            "src": "/imgs/gallery/sample-3.png",
+            "src": "/imgs/gallery/compare/logo-recraft.webp",
             "model": "Recraft",
             "style": "Design"
           },
           {
-            "src": "/imgs/gallery/sample-7.png",
+            "src": "/imgs/gallery/compare/logo-ideogram.png",
             "model": "Ideogram",
             "style": "Typography"
           },
           {
-            "src": "/imgs/gallery/sample-2.png",
+            "src": "/imgs/gallery/compare/logo-gemini.png",
             "model": "Gemini",
             "style": "Creative"
           }
@@ -103,55 +103,55 @@
         "id": "gallery",
         "block": "gallery",
         "title": "See What's Possible",
-        "description": "Real examples generated with our multi-model comparison. Hover to see prompts.",
-        "tip": "All images above were created by comparing different AI models",
+        "description": "Real results from our multi-model comparison — every image was chosen from 5 AI alternatives.",
+        "tip": "Each image was selected after comparing 5 different AI models",
         "items": [
           {
-            "src": "/imgs/gallery/sample-1.png",
-            "alt": "AI generated portrait",
-            "prompt": "A professional headshot of a confident businesswoman, studio lighting",
+            "src": "/imgs/gallery/compare/headshot-flux-pro.jpg",
+            "alt": "AI generated professional headshot",
+            "prompt": "Professional LinkedIn headshot, young female entrepreneur, confident smile",
             "model": "Flux Pro"
           },
           {
-            "src": "/imgs/gallery/sample-2.png",
-            "alt": "AI generated landscape",
-            "prompt": "Mystical forest with glowing mushrooms, fantasy art style",
-            "model": "Gemini"
-          },
-          {
-            "src": "/imgs/gallery/sample-3.png",
-            "alt": "AI generated product",
-            "prompt": "Minimalist product photography of a perfume bottle, white background",
+            "src": "/imgs/gallery/compare/product-recraft.webp",
+            "alt": "AI generated product photography",
+            "prompt": "Minimalist luxury skincare product on marble surface, soft studio lighting",
             "model": "Recraft"
           },
           {
-            "src": "/imgs/gallery/sample-4.png",
-            "alt": "AI generated logo",
-            "prompt": "Modern tech startup logo, geometric shapes, blue gradient",
+            "src": "/imgs/gallery/compare/logo-ideogram.png",
+            "alt": "AI generated logo design",
+            "prompt": "Modern tech startup logo, letter M, clean geometric, gradient purple to blue",
             "model": "Ideogram"
           },
           {
-            "src": "/imgs/gallery/sample-5.png",
-            "alt": "AI generated illustration",
-            "prompt": "Cute cartoon cat wearing a space helmet, kawaii style",
-            "model": "Flux Dev"
-          },
-          {
-            "src": "/imgs/gallery/sample-6.png",
-            "alt": "AI generated art",
-            "prompt": "Abstract expressionist painting, bold colors, textured brush strokes",
-            "model": "Gemini"
-          },
-          {
-            "src": "/imgs/gallery/sample-7.png",
-            "alt": "AI generated scene",
-            "prompt": "Cozy coffee shop interior, warm lighting, rainy day outside",
+            "src": "/imgs/gallery/compare/logo-flux-pro.jpg",
+            "alt": "AI generated 3D logo",
+            "prompt": "Modern tech startup logo, letter M, clean geometric, gradient purple to blue",
             "model": "Flux Pro"
           },
           {
-            "src": "/imgs/gallery/sample-8.png",
-            "alt": "AI generated character",
-            "prompt": "Cyberpunk character portrait, neon lights, detailed armor",
+            "src": "/imgs/gallery/compare/headshot-gemini.png",
+            "alt": "AI generated headshot creative style",
+            "prompt": "Professional LinkedIn headshot, young female entrepreneur, confident smile",
+            "model": "Gemini"
+          },
+          {
+            "src": "/imgs/gallery/compare/product-flux-pro.jpg",
+            "alt": "AI generated minimalist product shot",
+            "prompt": "Minimalist luxury skincare product on marble surface, soft studio lighting",
+            "model": "Flux Pro"
+          },
+          {
+            "src": "/imgs/gallery/compare/logo-recraft.webp",
+            "alt": "AI generated clean logo",
+            "prompt": "Modern tech startup logo, letter M, clean geometric, gradient purple to blue",
+            "model": "Recraft"
+          },
+          {
+            "src": "/imgs/gallery/compare/headshot-recraft.webp",
+            "alt": "AI generated corporate headshot",
+            "prompt": "Professional LinkedIn headshot, young female entrepreneur, confident smile",
             "model": "Recraft"
           }
         ]
