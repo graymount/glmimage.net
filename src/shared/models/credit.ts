@@ -320,8 +320,17 @@ export async function getRemainingCredits(userId: string): Promise<number> {
   return parseInt(result?.total || '0');
 }
 
-// grant credits for new user
+// grant credits for new user (only once, on first login)
 export async function grantCreditsForNewUser(user: User) {
+  // check if user already received initial credits (prevent double-granting)
+  const existingCredits = await getCreditsCount({
+    userId: user.id,
+    transactionType: CreditTransactionType.GRANT,
+  });
+  if (existingCredits > 0) {
+    return;
+  }
+
   // get configs from db
   const configs = await getAllConfigs();
 
@@ -330,16 +339,16 @@ export async function grantCreditsForNewUser(user: User) {
     return;
   }
 
-  // get initial credits amount and valid days
-  const credits = parseInt(configs.initial_credits_amount as string) || 0;
+  // get initial credits amount and valid days (default: 30 credits, 30 days)
+  const credits = parseInt(configs.initial_credits_amount as string) || 30;
   if (credits <= 0) {
     return;
   }
 
   const creditsValidDays =
-    parseInt(configs.initial_credits_valid_days as string) || 0;
+    parseInt(configs.initial_credits_valid_days as string) || 30;
 
-  const description = configs.initial_credits_description || 'initial credits';
+  const description = configs.initial_credits_description || 'Welcome to GLM Image! Free credits to get started.';
 
   const newCredit = await grantCreditsForUser({
     user: user,
