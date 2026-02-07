@@ -1,5 +1,6 @@
 import { AIMediaType } from '@/extensions/ai';
 import { getUuid } from '@/shared/lib/hash';
+import { enforceMinIntervalRateLimit } from '@/shared/lib/rate-limit';
 import { respData, respErr } from '@/shared/lib/resp';
 import { createAITask, NewAITask } from '@/shared/models/ai_task';
 import { getRemainingCredits } from '@/shared/models/credit';
@@ -8,6 +9,13 @@ import { getAIService } from '@/shared/services/ai';
 import { COMPARE_MODELS, CompareTask } from '@/shared/types/compare';
 
 export async function POST(request: Request) {
+  // Rate limit: 1 compare request per 10 seconds per user
+  const rateLimitResponse = enforceMinIntervalRateLimit(request, {
+    intervalMs: 10_000,
+    keyPrefix: 'compare-generate',
+  });
+  if (rateLimitResponse) return rateLimitResponse;
+
   try {
     const { prompt } = await request.json();
 

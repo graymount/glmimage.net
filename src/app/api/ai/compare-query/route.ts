@@ -1,3 +1,4 @@
+import { enforceMinIntervalRateLimit } from '@/shared/lib/rate-limit';
 import { respData, respErr } from '@/shared/lib/resp';
 import {
   findAITasksBySessionId,
@@ -9,6 +10,13 @@ import { getAIService } from '@/shared/services/ai';
 import { CompareTask, COMPARE_MODELS } from '@/shared/types/compare';
 
 export async function POST(req: Request) {
+  // Rate limit: 1 query per 2 seconds per user
+  const rateLimitResponse = enforceMinIntervalRateLimit(req, {
+    intervalMs: 2_000,
+    keyPrefix: 'compare-query',
+  });
+  if (rateLimitResponse) return rateLimitResponse;
+
   try {
     const { sessionId } = await req.json();
     if (!sessionId) {
