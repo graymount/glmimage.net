@@ -64,3 +64,4 @@ src/config/db/migrations*
 
 .chats
 .env*.local
+.playwright-mcp/
