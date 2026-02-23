@@ -1,19 +1,16 @@
-# ShipAny Template Two
+# glmimage.net
 
-## Getting Started
+AI image comparison platform. Submit one prompt, compare outputs from multiple AI models side by side, and pick your visual direction.
 
-read [ShipAny Document](https://shipany.ai/docs/quick-start) to start your AI SaaS project.
+**Live**: [https://www.glmimage.net](https://www.glmimage.net)
 
-## Buy Templates
+## Development
 
-check [ShipAny Templates](https://shipany.ai/templates) to buy Business Templates.
+```bash
+pnpm install
+pnpm dev
+```
 
-## Feedback
+## Deploy
 
-submit your feedbacks on [Github Issues](https://github.com/shipanyai/shipany-template-two/issues)
-
-## LICENSE
-
-!!! Please do not publicly release ShipAny's Code. Illegal use will be prosecuted
-
-[ShipAny LICENSE](./LICENSE)
+Deployed on Vercel. Push to `main` to trigger a deploy.

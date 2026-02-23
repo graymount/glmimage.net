@@ -655,7 +655,7 @@ export async function getSettings() {
       name: 'plausible_domain',
       title: 'Plausible Domain',
       type: 'text',
-      placeholder: 'shipany.site',
+      placeholder: 'glmimage.net',
       group: 'plausible',
       tab: 'analytics',
     },

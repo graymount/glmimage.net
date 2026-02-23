@@ -2,21 +2,8 @@
   "name": "glmimage-net",
   "version": "1.7.1",
   "private": true,
-  "author": "ShipAny.ai",
-  "homepage": "https://shipany.ai",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shipanyai/shipany-template-two"
-  },
-  "keywords": [
-    "shipany",
-    "shipany-two",
-    "shipany-template-two",
-    "ai-saas-boilerplate",
-    "ai-saas-template",
-    "ai-saas-framework",
-    "ai-saas-development"
-  ],
+  "author": "glmimage.net",
+  "homepage": "https://www.glmimage.net",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
